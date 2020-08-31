@@ -27,3 +27,6 @@ allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D }
 
 allow system_server self:socket ioctl;
 allow system_server self:socket create_socket_perms;
+
+# Smart Charging
+allow system_server sysfs_batteryinfo:file { getattr open read write };
